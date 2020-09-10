@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:clipToPadding="true"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".LeaderBoard">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="409dp"
+        android:layout_height="150dp"
+        android:background="#131313"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvLeaderBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:background="#000000"
+            android:text="Leader Board"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#EBE9EF" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tvLeaderBoard"
+            android:layout_marginLeft="100dp"
+            android:layout_toEndOf="@id/tvLeaderBoard"
+            android:background="@drawable/rounded_corner"
+            android:text="Submit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolBar"
+            android:background="#000"
+            app:titleTextColor="#fff"
+            app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#fff"
+            app:tabIndicatorHeight="1.5dp"
+            app:tabMode="fixed"
+            app:tabTextColor="#fff">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabLearner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learner" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabSkill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skill" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabLayout" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

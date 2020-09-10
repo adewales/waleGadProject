@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="grey">#525958</color>
+    <color name="textTitle">#131313</color>
+    <color name="submissionBg">#000000</color>
+    <color name="colorMainConstraint">#000000</color>
+    <color name="submissionTitle">#BD7F23</color>
+    <color name="btnstartcolor">#FACA84</color>
+    <color name="btnendcolor">#BD7F23</color>
+    <color name="lineendcolor">#855208</color>
+    <color name="white">#ffffff</color>
+    <color name="linestartcolor">#7A6B3E</color>
+    <color name="answer">#FF9800</color>
+
+
+</resources>
